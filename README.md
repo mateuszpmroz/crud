@@ -1,23 +1,20 @@
 ## Formularz CRUD
 
-Linki prowadz¹ do miejsc, w których zosta³ napisany kod z poprzedzaj¹cych go technologii.
+Linki prowadzÄ… do miejsc, w ktÃ³rych zostaÅ‚ napisany kod z poprzedzajÄ…cych go technologii.
 
 ### PHP Laravel
-* 
-* 
-* 
+* https://github.com/mateuszpmroz/crud/tree/master/app/Http/Controllers
+* https://github.com/mateuszpmroz/crud/blob/master/database/migrations/2017_11_01_201201_create_cars_table.php
+* https://github.com/mateuszpmroz/crud/blob/master/routes/web.php
 
-### JavaScript Vue.js
-*
-*
-*
 
 ### CSS SASS
-*
-*
-*
+* https://github.com/mateuszpmroz/crud/tree/master/resources/assets/sass
 
-## HTML Bootstrap
-*
-*
-*
+
+### HTML Bootstrap
+* https://github.com/mateuszpmroz/crud/tree/master/resources/views
+
+
+### JavaScript Vue.js
+* brak
