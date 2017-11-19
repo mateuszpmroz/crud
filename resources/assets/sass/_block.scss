@@ -1,0 +1,23 @@
+.block {
+  border:3px rgba(45, 136, 188, 0.67) solid;
+  margin-bottom:0.5em;
+  border-radius: 5px;
+  &__header{
+    padding:0.2em;
+    font-size:1.5em;
+    color:white;
+    background-color: rgba(48, 151, 209, 0.75);
+  }
+  &__content{
+    padding:0.3em;
+    font-size:1.2em;
+    background-color: white;
+  }
+  &__table{
+    width:100%;
+    td{
+      width:25%;
+  }
+
+  }
+}
