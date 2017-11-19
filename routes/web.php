@@ -25,3 +25,6 @@ Route::get("/edit/{id}", "CarController@edit")->name('edit');
 
 /* Car update */
 Route::post("/update/{id}", "CarController@update")->name('update');
+
+/* Car search */
+Route::get("/search", "CarController@search")->name('search');

@@ -41,18 +41,24 @@ class CarController extends Controller
     public function index()
     {
         $cars = Car::paginate(5);
-        return view('index')->with([ 'cars' => $cars]);
+        return view('index')->with(['cars' => $cars]);
     }
-    public function delete($id){
+
+    public function delete($id)
+    {
         $car = Car::find($id);
         $car->delete();
-        return redirect('/',301);
+        return redirect('/', 301);
     }
-    public function edit($id){
+
+    public function edit($id)
+    {
         $car = Car::find($id);
-        return view('edit')->with([ 'car' => $car]);
+        return view('edit')->with(['car' => $car]);
     }
-    public function update($id){
+
+    public function update($id)
+    {
         $car = Car::find($id);
         $validatedData = $this->request->validate([
             'brand' => 'required|max:100|alpha_dash',
@@ -66,6 +72,13 @@ class CarController extends Controller
         $car->model = $model;
         $car->production_year = $productionYear;
         $car->save();
-        return redirect('/',301);
+        return redirect('/', 301);
+    }
+
+    public function search()
+    {
+        $like = $this->request->get('like');
+        $cars = Car::where('brand', 'LIKE', '%' . $like . '%')->orWhere('model', 'LIKE', '%' . $like . '%')->orWhere('production_year', 'LIKE', '%' . $like . '%')->paginate(5);
+        return view('index')->with(['cars' => $cars]);
     }
 }
